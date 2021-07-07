@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Implement Promise By self</title>
+  <script src="./promise.js"></script>
+</head>
+
+<body>
+
+  <script>
+
+    // const p = new Promise((reslove, reject) => {
+    //   // reslove('ok');
+    //   setTimeout(() => {
+    //     reject('fail');
+    //   }, 100);
+    // })
+
+    // const res = p.then(value => {
+    //   console.log(value);
+    //   // return new Promise((reslove, reject) => {
+    //   //   // reslove('sucess');
+    //   //   reject('fail');
+    //   // })
+    //   // throw 'Fail';
+    // }, reason => {
+    //   console.warn(reason);
+    // });
+
+    // console.log(res);
+
+    // const p = Promise.resolve('ok');
+
+    // const p2 = Promise.resolve(new Promise((resolve, reject) => {
+    //   reject('err');
+    // }))
+
+    const p = Promise.reject('err');
+    const p2 = Promise.reject(new Promise((resolve, reject) => {
+      resolve('sucess');
+    }))
+    console.log(p);
+    console.log(p2);
+  </script>
+
+</body>
+
+</html>
